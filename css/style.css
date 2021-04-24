@@ -186,7 +186,6 @@ a {
   max-width: 100%;
   object-fit: fill;
   -webkit-filter: brightness(30%);
-  
 }
 
 .container-fluid .carousel-caption {
@@ -330,7 +329,7 @@ a {
 .Facility-svg .carousel-indicators [data-bs-target]{
   width: 10px !important;
   height: 10px !important;
-  border-radius: 50px;
+  border-radius: 100px;
   border-top: 0 !important;
   border-bottom: 0 !important;
 }
