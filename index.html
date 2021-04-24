@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title># Tag | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav id="navbar" style="border-radius: 0; transition: all .5s ease;"
+        class="navbar navbar-expand-md navbar-dark bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="animate__animated animate__bounceIn" src="./Assets/Icons/logo-main.png" id="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+    <button
+        style="z-index: 1000;position: fixed;bottom: 20px;right: 30px; color: rgba(255, 0, 0, 0.575); background-color: rgb(226, 226, 226); border-radius: 50px; font-weight: 300; font-size: 14px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);"
+        class="btn p-2" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+
+    <div class="container-fluid" style="margin-top: 30px;">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Assets/carousel/caro1.jpg" class="d-block w-100 carousel-image" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="animate__animated animate__pulse animate__delay-1s">DEVELOPMENT</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/carousel/caro2.jpg" class="d-block w-100 carousel-image" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="animate__animated animate__pulse animate__delay-1s">DESIGN</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/carousel/caro3.jpg" class="d-block w-100 carousel-image" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="animate__animated animate__pulse animate__delay-1s">SEO / SMM</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/carousel/caro2.jpg" class="d-block w-100 carousel-image" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="animate__animated animate__pulse animate__delay-1s">STRATEGY</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row box">
+            <h1 class="service-box-head my-5 text-center">Our Services</h1>
+            <div class="col-md-4 mt-5" data-aos="zoom-in-right">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa fa-television card-icon"></i>
+                        <h5 class="card-title text-center">Website Design & Development</h5>
+                        <p class="card-text text-center">We provide upscale website design and development services
+                            exclusively for the luxury car service providing organizations<br> etc...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5 mb-5" data-aos="fade-up">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa fa-cogs card-icon text-center"></i>
+                        <h5 class="card-title text-center">App Development</h5>
+                        <p class="card-text text-center">Our app development services cater exclusively to the
+                            luxury limousine
+                            industry. Lorem ipsum dolor sit amet consectetur adipisicing elit<br>
+                            etc...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5" data-aos="zoom-in-left">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-pencil-square-o fa card-icon"></i>
+                        <h5 class="card-title text-center">Graphic Design</h5>
+                        <p class="card-text text-center">Hashtag's team has the technological savvy, creative flair
+                            and design
+                            experience to develop powerful tailor-made platforms<br> etc...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <a href="./aboutus.html" class="btn1 hover-btn ">See More <i
+                        class="fa fa-chevron-right ps-1 animate__animated animate__infinite animate__fadeOutRight"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-box">
+        <div class="row">
+            <div class="col-md-6 Facility-text">
+                <p class="Facility-text-p">Our Facility <br><span class="typed-text"></span><span
+                        class="cursor animate__animated animate__fadeOut animate__infinite animate__fast">&nbsp;</span>
+                </p>
+            </div>
+            <div class="col-md-6 Facility-svg">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators mt-7">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner caro-svg">
+                        <div class="carousel-item active">
+                            <img src="./Assets/Svg/undraw_Web_developer_re_h7ie (1).svg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/Svg/undraw_mobile_web_2g8b.svg " class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/Svg/undraw_Wall_post_re_y78d.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/Svg/undraw_slider_5bgj.svg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Java Scripts -->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript">
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-60px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+</body>
+
+</html>
