@@ -186,6 +186,7 @@ a {
   max-width: 100%;
   object-fit: fill;
   -webkit-filter: brightness(30%);
+  
 }
 
 .container-fluid .carousel-caption {
