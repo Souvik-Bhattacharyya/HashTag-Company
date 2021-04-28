@@ -10,15 +10,43 @@ body {
   background: #fff;
 }
 
+.form-control{
+  border-radius:0 !important;
+}
+
 .animate__animated.animate__pulse {
   --animate-duration: 1.5s;
 }
 
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+textarea:active, input:active, textarea:focus, input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-floating>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 1.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+}
+
 /* scrollbar */
+
 .animate__animated.animate__bounce {
   --animate-duration: 2s;
 }
-.animate__animated.animate__fadeOut{
+
+.animate__animated.animate__fadeOut {
   --animation-duration: .5s;
 }
 
@@ -38,10 +66,14 @@ body {
   background: #6082B6;
   width: 8px;
 }
+
 /* / */
 
-.mt-7{
+.mt-7 {
   margin-top: 100px;
+}
+.mb-7 {
+  margin-bottom: 100px;
 }
 a {
   text-decoration: none;
@@ -53,7 +85,36 @@ a {
   vertical-align: 0%;
 }
 
-.btn:focus, .btn:active {
+/* Blur-zoom Container */
+
+.img-hover-zoom--blur {
+  transition: transform 2s, filter 3s ease-in-out;
+  filter: blur(5px);
+  transform: scale(1.2);
+}
+
+/* The Transformation */
+
+.img-hover-zoom--blur:hover {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+#myBtn {
+  border: 1px solid transparent;
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  color: rgba(255, 0, 0, 0.575);
+  background-color: rgb(226, 226, 226);
+  border-radius: 50px;
+  font-weight: 300;
+  font-size: 14px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+.btn:focus, .btn:active , #myBtn:active{
   outline: none !important;
   box-shadow: none !important;
 }
@@ -99,9 +160,10 @@ a {
   border: 1px solid dodgerblue;
   cursor: pointer;
   padding: 5px 15px;
-  margin-top: 20px;
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
+  margin-bottom: 15px;
+  z-index: 1;
 }
 
 .btn1::before {
@@ -118,16 +180,43 @@ a {
 .hover-btn::before {
   width: 100%;
   height: 0;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-34deg);
 }
 
 .hover-btn:hover::before {
-  height: 500%;
+  height: 300%;
 }
 
 .hover-btn:hover {
   color: #fff;
 }
+
+/* w-100 button */
+.hover-btn1 {
+  background: transparent;
+  border: 1px solid dodgerblue;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.hover-btn1::before {
+  width:100%;
+  height: 0;
+  transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.hover-btn1:hover::before {
+  height: 750%;
+}
+
+.hover-btn1:hover {
+  color: #fff;
+}
+
+/* / */
 
 .bg-light {
   background-color: #28282B !important;
@@ -169,18 +258,18 @@ a {
   border-radius: 4px;
 }
 
-.container-fluid {
+.top-caro {
   width: 100% !important;
   padding: 0 !important;
 }
 
-.container-fluid  .carosel-item {
+.top-caro .carosel-item {
   width: 100%;
   height: 100vh !important;
   max-height: 768px !important;
 }
 
-.container-fluid  .carousel-image {
+.top-caro .carousel-image {
   position: relative;
   max-height: 600px;
   max-width: 100%;
@@ -188,12 +277,12 @@ a {
   -webkit-filter: brightness(30%);
 }
 
-.container-fluid .carousel-caption {
+.top-caro .carousel-caption {
   bottom: 220px !important;
   color: #fff !important;
 }
 
-.container-fluid  .carousel-caption h5 {
+.top-caro .carousel-caption h5 {
   font-size: 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -202,7 +291,7 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
-.container-fluid  .carousel-caption p {
+.top-caro .carousel-caption p {
   font-size: 18px;
   margin: auto;
   width: 60%;
@@ -218,13 +307,32 @@ a {
 .box p {
   padding: 0 20px;
 }
-.service-box-head{
+
+.service-box-head {
   font-size: 40px;
   font-weight: 500;
-  font-family: 'Poppins' , sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: #0096FF;
+  position: relative;
+  padding-left: 30px;
 }
-.searvice-box-para
-{
+.service-box-head::before{
+  content: '';
+  background: #2fb199;
+  z-index: 9;
+  width: 5px;
+  bottom: 0;
+  height: 5px;
+}
+.service-box-head::after{
+  content: '';
+  background: #28282B;
+  z-index: 9;
+  height: 5px;
+}
+
+
+.searvice-box-para {
   font-size: 14px;
 }
 
@@ -241,7 +349,7 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #006cff;
+  color: #0096FF;
   font-weight: 300;
   background-color: #fff;
 }
@@ -266,42 +374,51 @@ a {
   font-size: 14px;
 }
 
-.main-box{
+.main-box {
   width: 100%;
-  /* background-color: tomato; */
-  margin-top: 60px;
+  background: url("/Assets/background/snow.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
 }
 
-.Facility-text{
+.Facility-svg {
+  padding-top: 50px;
+}
+
+.Facility-text {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.Facility-text-p{
+
+.Facility-text-p {
   font-size: 30px;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: #28282B;
   letter-spacing: .1rem;
 }
-.typed-text{
-  font-size: 2.5rem;
-  font-family: 'Lato',sans-serif;
+
+.typed-text {
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: #006cff;
 }
-.cursor{
+
+.cursor {
   display: inline-block;
   width: 3px;
   background-color: #212529;
   margin-left: .2rem;
 }
-.Facility-svg{
-  padding-top: 100px;
-}
 
 /* svg carousel */
+
 /* .caro-svg{
   max-width: 100%;
   max-height: 400px;
@@ -326,7 +443,8 @@ a {
   list-style: none;
   transform: rotate(90deg) !important;
 }
-.Facility-svg .carousel-indicators [data-bs-target]{
+
+.Facility-svg .carousel-indicators [data-bs-target] {
   width: 10px !important;
   height: 10px !important;
   border-radius: 100px;
@@ -334,7 +452,44 @@ a {
   border-bottom: 0 !important;
 }
 
+
+
+/* Footer */
+/* footer{
+
+} */
+
+footer .container-fluid{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.icons{
+  margin-left: 20px;
+  z-index: 1000;
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+}
+
+.icons i{
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #f1f1f1;
+  cursor: pointer;
+  z-index: 100;
+  transition: all .8s ease;
+}
+.icons i:hover{
+  bottom: 25px;
+  color: #0096FF;
+}
+
 @media screen and (max-width: 792px) {
+  .w-50{
+    width: 100% !important;
+    padding: 15px !important;
+  }
   .logo {
     float: left !important;
     text-align: left !important;
