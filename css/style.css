@@ -605,28 +605,28 @@ footer .container-fluid {
     height: 325px;
   }
   .carousel-control-next-icon, .carousel-control-prev-icon {
-    display: inline-block;
+    display: none;
     width: 2rem;
     height: 2rem;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 100% 100%;
-    margin-top: 28px;
+    background-size: 100%;
+
   }
   .top-caro .carousel-caption {
     bottom: 100px !important;
     color: #fff !important;
   }
-  .top-caro .carousel-caption .w-caro {
-    width: 90% !important;
+  .top-caro .carousel-caption h5 {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 5px;
   }
-  .top-caro .carousel-caption .w1-caro {
-    width: 70% !important;
-    bottom: 40px !important;
-  }
-  .top-caro .carousel-caption svg {
-    width: 50%;
-  }
+  
   .Facility-svg .carousel-indicators {
     right: -300px !important;
   }
