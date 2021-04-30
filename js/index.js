@@ -1,3 +1,15 @@
+// When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-60px";
+    }
+prevScrollpos = currentScrollPos;
+}
+
 // <!-- Scroll To Top Button -->
 
 mybutton = document.getElementById("myBtn");
@@ -20,45 +32,45 @@ function topFunction() {
 
 // typedText
 const typedTextSpan = document.querySelector(".typed-text");
-const textArray = ["Website Design & Development","App Development", "Backend Operations For Night Shifts" ,"Andriod & iOS","Graphic Design","Digital Marketing"];
+const textArray = ["Website Design & Development", "App Development", "Backend Operations For Night Shifts", "Andriod & iOS", "Graphic Design", "Digital Marketing"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
 let textArrayIndex = 0;
 let charIndex = 0;
 
-function type(){
-    if(charIndex < textArray[textArrayIndex].length){
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
         typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
         charIndex++;
         setTimeout(type, typingDelay);
     }
-    else{
+    else {
         setTimeout(erase, newTextDelay);
     }
 };
 
-function erase(){
-    if(charIndex > 0){
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0,charIndex-1);
-        charIndex --;
-        setTimeout(erase , erasingDelay);
+function erase() {
+    if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
     }
-    else{
-        textArrayIndex ++;
-        if(textArrayIndex >=textArray.length) textArrayIndex=0;
+    else {
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
         setTimeout(type, typingDelay + 1100);
     }
 };
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     setTimeout(type, newTextDelay + 250);
 });
 
 
 // Svg Animated
-const logo = document.querySelectorAll("#top-svg path");
+// const logo = document.querySelectorAll("#top-svg path");
 
-for(let i = 0; i<logo.length; i++){
-    console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
-}
+// for(let i = 0; i<logo.length; i++){
+//     console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+// }

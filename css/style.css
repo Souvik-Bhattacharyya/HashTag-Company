@@ -110,8 +110,8 @@ a {
   position: fixed;
   bottom: 20px;
   right: 30px;
-  color: #ffffff;
-  background-color: #ffc400;
+  color: #000000;
+  background-color: #ffc4000e;
   font-weight: 300;
   font-size: 14px;
   border-radius: 100px;
@@ -515,9 +515,8 @@ a {
   color: #0096FF;
   font-size: 2em;
   font-family: 'Poppins', sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
 /* Footer */
 
 /* footer{
@@ -527,8 +526,7 @@ a {
 footer .container-fluid {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #212529 !important;
-  display: flex;
+  position: fixed;
 }
 
 .icons {
@@ -537,7 +535,6 @@ footer .container-fluid {
   align-items: center;
   z-index: 1000;
   padding: 10px;
-  width: 50%;
 }
 
 .icons i {
@@ -555,20 +552,6 @@ footer .container-fluid {
   color: #0096FF;
   transform: translateY(-8px);
 }
-.footer-brand{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-
-.footer-brand img{
-  max-width: 100px;
-  max-height: 50px;
-  -webkit-filter: drop-shadow(3px -1px 3px #ddddddb4);
-  filter: drop-shadow(3px -1px 3px #ffffffb4);
-}
-
 
 /* Clients */
 .footer-top{
@@ -707,11 +690,18 @@ footer .container-fluid {
   }
   .nav-item .nav-link.active {
     color: #2fb199 !important;
-    border-bottom: 0;
+    border-bottom: 3px solid transparent;
     border-radius: 4px;
   }
+  .nav-item .nav-link:hover {
+    border-left: 3px solid #ffc107;
+    border-right: 3px solid #ffc107;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+  }  
   .bg-light {
-    background-color: rgb(44, 61, 78) !important;
+    background-color: #28282B !important;
   }
   .top-caro .carousel-image {
     width: 100vw;
