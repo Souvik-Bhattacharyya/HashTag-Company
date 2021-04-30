@@ -15,6 +15,7 @@ body {
   border-radius: 0 !important;
 }
 
+
 .animate__animated.animate__pulse {
   --animate-duration: 1.5s;
 }
@@ -239,7 +240,10 @@ a {
 /* / */
 
 .bg-light {
-  background-color: #28282B !important;
+  background-color:#2b2727e3!important;
+  border-top: 1px solid rgba(255, 255, 255, .02);
+  border-left: 1px solid rgba(255, 255, 255, .02);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
 }
 
 .navbar-light .navbar-toggler {
@@ -267,6 +271,7 @@ a {
   text-transform: uppercase;
   border: 3px solid transparent;
   padding:10px;
+  color: #28282B;
 }
 
 .nav-item .nav-link.active {
@@ -516,20 +521,23 @@ a {
 /* Footer */
 
 /* footer{
-
+  position: fixed;
 } */
 
 footer .container-fluid {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #212529 !important;
+  display: flex;
 }
 
 .icons {
-  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  position: fixed;
-  left: 30px;
-  bottom: 20px;
+  padding: 10px;
+  width: 50%;
 }
 
 .icons i {
@@ -539,6 +547,7 @@ footer .container-fluid {
   cursor: pointer;
   z-index: 100;
   transition: all 1s ease ;
+  border-radius: 20px;
 }
 
 .icons i:hover {
@@ -546,24 +555,41 @@ footer .container-fluid {
   color: #0096FF;
   transform: translateY(-8px);
 }
+.footer-brand{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.footer-brand img{
+  max-width: 100px;
+  max-height: 50px;
+  -webkit-filter: drop-shadow(3px -1px 3px #ddddddb4);
+  filter: drop-shadow(3px -1px 3px #ffffffb4);
+}
 
 
 /* Clients */
-.clients-says{
+.footer-top{
+  border-top: dashed 1px #0000006b;
+  z-index: 100;
+  background: #fafafa;
+}
+.clients-offer{
   padding-left: 4em;
   padding-right: 4em;
-  border-top: dotted 1px #757575;
 }
-.clients-says h5{
+.clients-offer h5{
   font-family: 'Poppins' , sans-serif;
   font-size: 14px;
   font-weight: 600;
 }
-.clients-says h6{
+.clients-offer h6{
   font-size: 10px;
   color: #686868;
 }
-.clients-says li{
+.clients-offer li{
   list-style: circle;
   font-weight: 500;
   font-family: 'Roboto';
@@ -572,8 +598,95 @@ footer .container-fluid {
   color: #757575;
 }
 
+.clients-says {
+  position: relative;
+}
 
+.clients-says h5{
+  font-family: 'Poppins' , sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444444;
+  margin-bottom: 20px;
+}
+
+.clients-says .carousel{
+  width: 430px !important;
+  height: 220px !important;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.clients-says .carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+.clients-says .carousel-item .carousel-caption{
+  bottom: 50px;
+  font-size: 12px;
+  font-family: 'Poppins' , sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.clients-says .carousel-control-prev{
+  position: absolute;
+  border-radius: 3px;
+  top: -30px;
+  bottom: 70px;
+  left: 380px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  padding-top: 10px;
+  padding: 0;
+  color: rgb(136, 136, 136);
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 1;
+  transition: opacity .15s ease;
+  background: #eee;
+}
+.clients-says .carousel-control-next{
+  position: absolute;
+  border-radius: 3px;
+  top: -30px;
+  bottom: 70px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  padding-top: 10px;
+  padding: 0;
+  color: rgb(136, 136, 136);
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 1;
+  transition: opacity .15s ease;
+  background: #eee;
+}
+.clients-says .fa-left, .fa-right {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.user-icon{
+  position: absolute;
+  z-index: 1000;
+  top: 210px;
+  left: 60px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1000;
+  top: 164px;
+  left: 40px;
+}
+
+/* Mobile View */
 @media screen and (max-width: 792px) {
+
   body {
     margin-top: 60px;
   }
@@ -604,14 +717,13 @@ footer .container-fluid {
     width: 100vw;
     height: 325px;
   }
-  .carousel-control-next-icon, .carousel-control-prev-icon {
+  .top-caro .carousel-control-next-icon, .carousel-control-prev-icon {
     display: none;
     width: 2rem;
     height: 2rem;
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100%;
-
   }
   .top-caro .carousel-caption {
     bottom: 100px !important;
@@ -647,5 +759,46 @@ footer .container-fluid {
     cursor: pointer;
     z-index: 100;
     transition: all .8s ease;
+  }
+  .footer-top .col-md-5{
+    padding-bottom: 3rem;
+  }
+  .clients-says .carousel-item .carousel-caption{
+    bottom: 25px;
+    font-size: 11px;
+    font-family: 'Poppins' , sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  .clients-says .carousel-control-next{
+    top: -40px;
+    bottom: 70px;
+  }
+  .clients-says .carousel-control-prev{
+    top: -40px;
+    bottom: 70px;
+    left: 285px;
+    z-index: 1;
+  }
+  .user-icon{
+    position: absolute;
+    z-index: 1000;
+    top: 175px;
+    left: 50px;
+  }
+  .details{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+    top: 150px;
+    left: 40px;
+  }
+  .clients-says .carousel{
+    width: 330px !important;
+    height: 220px !important;
+    position: relative;
+    transition: all 0.5s ease;
   }
 }
