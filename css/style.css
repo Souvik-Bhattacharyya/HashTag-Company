@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url("./fonts.css");
 * {
   margin: 0;
   padding: 0;
+}
+
+a{
+  text-decoration: none;
 }
 
 body {
@@ -415,16 +416,17 @@ a {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   padding-bottom: 10px;
 }
 
 .card-text {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   padding: 0 30px !important;
   letter-spacing: 1px;
   font-weight: 400 !important;
+  color: #757575;
 }
 
 .hover-btn i {
@@ -526,10 +528,12 @@ a {
 footer .container-fluid {
   margin: 0 !important;
   padding: 0 !important;
-  position: fixed;
 }
 
 .icons {
+  position: fixed;
+  bottom:10px;
+  left: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -540,7 +544,7 @@ footer .container-fluid {
 .icons i {
   margin-left: 10px;
   margin-right: 10px;
-  color: #d4d4d4;
+  color: rgba(0, 0, 0, 0.11);
   cursor: pointer;
   z-index: 100;
   transition: all 1s ease ;
@@ -764,6 +768,7 @@ footer .container-fluid {
   .clients-says .carousel-control-next{
     top: -40px;
     bottom: 70px;
+    right: 50px;
   }
   .clients-says .carousel-control-prev{
     top: -40px;
@@ -790,5 +795,54 @@ footer .container-fluid {
     height: 220px !important;
     position: relative;
     transition: all 0.5s ease;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 400px) {
+  .clients-says .carousel-control-next{
+    top: -40px;
+    bottom: 70px;
+    right: 20px;
+  }
+  .clients-says .carousel-control-prev{
+    top: -40px;
+    bottom: 70px;
+    left: 265px;
+    z-index: 1;
+  }
+  .clients-offer{
+    padding-left: 3em;
+    padding-right: 1em;
+  }
+  .clients-says{
+    margin-left: -10px;
+  }
+  .clients-says .carousel{
+    width: 280px !important;
+    height: 180px !important;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  .clients-says .carousel-item .carousel-caption {
+    bottom: 16px;
+    font-size: 8px;
+    font-family: 'Poppins' , sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+  .details{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+    top: 132px;
+    left: 50px;
+  }
+  .user-icon{
+    position: absolute;
+    z-index: 1000;
+    top: 153px;
+    left: 50px;
   }
 }

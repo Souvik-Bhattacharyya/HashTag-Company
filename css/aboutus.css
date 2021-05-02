@@ -21,7 +21,7 @@ header .container-fluid::before{
     top: 0; 
     left: 0;
     bottom: 0;
-    right: 0;
+    right: 0; 
     z-index: 1;
     height: 300px;
 } 
@@ -50,9 +50,7 @@ header h1 span{
     font-weight: 600;
     font-family: 'Roboto' , sans-serif;
     letter-spacing: 2px;
-    background-image: linear-gradient(to left,#df3434,#0066ff );
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: #201b1b !important;
     
 }
 .top-contain-head i{
@@ -65,7 +63,7 @@ header h1 span{
     font-size: 18px;
     font-weight: 400;
     font-family: 'Roboto' , sans-serif;
-    color: #444444;
+    color: #818181;
 }
 
 .card{
