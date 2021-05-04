@@ -1,26 +1,26 @@
-@import url(./fonts.css);
+@import url("./fonts.css");
 .container-fluid{
     margin: 0;
     padding: 0;
 }
 header .container-fluid{
-    background-image: url('../Assets/background/chalkboard.jpg');
+    background-image: url('../Assets/background/bunting-flag.png');
     background-position: cover;
     background-repeat: repeat;
-    height: 300px;
+    height: 450px;
     width: 100%;
     box-shadow: 0px 5px 6px #00000038;
 }
 header .container-fluid::before{
     content: '';
     display: block;
-    background-color: #00000077;
+    background-color: #000000bd;
     top: 0; 
     left: 0;
     bottom: 0;
     right: 0;
     z-index: 1;
-    height: 300px;
+    height: 450px;
 }
 
 header .container-fluid h1{
@@ -40,4 +40,20 @@ header h1 span{
     color: #0096FF;
     font-size: 20px;
 }
- 
+.card{
+    margin-top: -100px;
+}
+.card-img-top{
+    color: dodgerblue;
+}
+.card-title{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.card-text{
+    font-size: 16px;
+    text-align: center;
+}

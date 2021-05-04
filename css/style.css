@@ -157,6 +157,7 @@ a {
   border: transparent;
   transition: all .5s ease;
 }
+
 .bg_colored_btn:hover{
   background-color: #212529;
 }
